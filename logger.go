@@ -6,10 +6,10 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/Hadhel.ReferenceShop/auth"
-	"github.com/Hadhel.ReferenceShop/common"
-	"github.com/Hadhel.ReferenceShop/model"
-	"github.com/Hadhel.ReferenceShop/user"
+	"github.com/ReferenceShop/auth"
+	"github.com/ReferenceShop/common"
+	"github.com/ReferenceShop/model"
+	"github.com/ReferenceShop/user"
 	gorm "github.com/jinzhu/gorm"
 	"github.com/sirupsen/logrus"
 )

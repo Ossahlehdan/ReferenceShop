@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/Hadhel.ReferenceShop/common"
-	hadhelError "github.com/Hadhel.ReferenceShop/hadhelerror"
-	"github.com/Hadhel.ReferenceShop/model"
+	"github.com/ReferenceShop/common"
+	hadhelError "github.com/ReferenceShop/hadhelerror"
+	"github.com/ReferenceShop/model"
 	"github.com/gorilla/mux"
 )
 

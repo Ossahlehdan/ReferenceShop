@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/Hadhel.ReferenceShop/common"
-	"github.com/Hadhel.ReferenceShop/model"
+	"github.com/ReferenceShop/common"
+	"github.com/ReferenceShop/model"
 )
 
 // FindAllCategories returns all the channels for which we have AsRun data

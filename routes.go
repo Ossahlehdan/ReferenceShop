@@ -3,9 +3,9 @@ package main
 import (
 	"net/http"
 
-	"github.com/Hadhel.ReferenceShop/category"
-	"github.com/Hadhel.ReferenceShop/product"
-	"github.com/Hadhel.ReferenceShop/user"
+	"github.com/ReferenceShop/category"
+	"github.com/ReferenceShop/product"
+	"github.com/ReferenceShop/user"
 )
 
 // Route defines a route
