@@ -1,0 +1,5 @@
+[postgres]
+	host="dbh"
+    user="admin"
+	pwd="admin"
+	db="ckessoun"

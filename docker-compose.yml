@@ -1,0 +1,27 @@
+version: "3"
+networks:
+  hadhel:
+    external: false
+    driver: bridge
+services:
+  dbh:
+    restart: always
+    image: postgres:latest
+    ports:
+      - "5435:5432"
+    networks:
+      - hadhel
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+      POSTGRES_DB: ckessoun
+  web:
+    image: hadhel_ref_api
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./:/app
+    depends_on:
+      - dbh  
+    networks:
+     - hadhel
