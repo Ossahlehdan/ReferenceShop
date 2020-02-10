@@ -5,7 +5,7 @@ import (
 	"errors"
 	"log"
 
-	"github.com/Hadhel.ReferenceShop/common"
+	"github.com/ReferenceShop/common"
 	"github.com/jinzhu/gorm"
 	bcrypt "golang.org/x/crypto/bcrypt"
 )

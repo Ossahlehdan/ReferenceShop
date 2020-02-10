@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/Hadhel.ReferenceShop/common"
-	"github.com/Hadhel.ReferenceShop/model"
+	"github.com/ReferenceShop/common"
+	"github.com/ReferenceShop/model"
 )
 
 // FindAllProducts returns all product
