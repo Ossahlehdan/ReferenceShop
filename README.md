@@ -1,2 +1,2 @@
-# Hadhel.ReferenceShop
+# ReferenceShop
 This repo contain all db access
