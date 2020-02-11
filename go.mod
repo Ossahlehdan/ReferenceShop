@@ -1,4 +1,4 @@
-module github.com/ckessou_api/referenceshop
+module github.com/Referenceshop
 
 go 1.13
 
