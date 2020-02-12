@@ -1,5 +1,5 @@
 [postgres]
-	host="https://bdb224makiti.fr"
+	host="https://bd.224makiti.fr"
     user="admin"
 	pwd="admin"
 	db="ckessoun"
