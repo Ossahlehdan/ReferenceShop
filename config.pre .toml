@@ -1,0 +1,5 @@
+[postgres]
+	host="db.224makiti.fr"
+    user="admin"
+	pwd="admin"
+	db="ckessoun"
