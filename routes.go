@@ -20,7 +20,7 @@ type Route struct {
 }
 
 // BaseAPI default base Api
-const BaseAPI = "/api/v1"
+const BaseAPI = "/referenceshop"
 
 // Routes is the set of routes handled by the router
 type Routes []Route
@@ -32,7 +32,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/categories",
 		nil,
-		false,
+		true,
 		category.GetCategories,
 	},
 	Route{
@@ -41,7 +41,7 @@ var routes = Routes{
 		"POST",
 		BaseAPI + "/categories/add",
 		nil,
-		false,
+		true,
 		category.AddCategory,
 	},
 	Route{
@@ -50,7 +50,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/categories/show/{categoryId}",
 		nil,
-		false,
+		true,
 		category.GetCayegoryByID,
 	},
 	Route{
@@ -59,7 +59,7 @@ var routes = Routes{
 		"PUT",
 		BaseAPI + "/categories/update",
 		nil,
-		false,
+		true,
 		category.UpdateCategory,
 	},
 	Route{
@@ -68,7 +68,7 @@ var routes = Routes{
 		"DELETE",
 		BaseAPI + "/categories/delete/{categoryId}",
 		nil,
-		false,
+		true,
 		category.DeleteCategoryByID,
 	},
 	Route{
@@ -77,7 +77,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/users",
 		nil,
-		false,
+		true,
 		user.GetUsers,
 	},
 	Route{
@@ -95,7 +95,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/users/show/{userid}",
 		nil,
-		false,
+		true,
 		user.GetUser,
 	},
 	Route{
@@ -113,7 +113,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/users/update",
 		nil,
-		false,
+		true,
 		user.UpdateUser,
 	},
 	Route{
@@ -122,7 +122,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/users/delete/{userid}",
 		nil,
-		false,
+		true,
 		user.DeleteUser,
 	},
 	Route{
@@ -131,7 +131,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/products",
 		nil,
-		false,
+		true,
 		product.GetProducts,
 	},
 	Route{
@@ -140,7 +140,7 @@ var routes = Routes{
 		"POST",
 		BaseAPI + "/products/add",
 		nil,
-		false,
+		true,
 		product.AddProduct,
 	},
 	Route{
@@ -149,7 +149,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/products/show/{productid}",
 		nil,
-		false,
+		true,
 		product.GetProductByID,
 	},
 	Route{
@@ -158,7 +158,7 @@ var routes = Routes{
 		"PUT",
 		BaseAPI + "/products/update",
 		nil,
-		false,
+		true,
 		product.UpdateProduct,
 	},
 	Route{
@@ -167,7 +167,7 @@ var routes = Routes{
 		"DELETE",
 		BaseAPI + "/products/delete/{productid}",
 		nil,
-		false,
+		true,
 		product.DeleteProductByID,
 	}, Route{
 		"GetImages",
@@ -175,7 +175,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/images",
 		nil,
-		false,
+		true,
 		product.GetProductImages,
 	},
 	Route{
@@ -184,7 +184,7 @@ var routes = Routes{
 		"POST",
 		BaseAPI + "/images/add",
 		nil,
-		false,
+		true,
 		product.AddProductImage,
 	},
 	Route{
@@ -193,7 +193,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/images/show/{imageid}",
 		nil,
-		false,
+		true,
 		product.GetProductImageByID,
 	},
 	Route{
@@ -202,7 +202,7 @@ var routes = Routes{
 		"PUT",
 		BaseAPI + "/images/update",
 		nil,
-		false,
+		true,
 		product.UpdateProductImage,
 	},
 	Route{
@@ -211,7 +211,7 @@ var routes = Routes{
 		"DELETE",
 		BaseAPI + "/images/delete/{imageid}",
 		nil,
-		false,
+		true,
 		product.DeleteProductImageByID,
 	},
 	Route{
@@ -220,7 +220,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/variantes",
 		nil,
-		false,
+		true,
 		product.GetProductVariantes,
 	},
 	Route{
@@ -229,7 +229,7 @@ var routes = Routes{
 		"POST",
 		BaseAPI + "/variantes/add",
 		nil,
-		false,
+		true,
 		product.AddProductVariante,
 	},
 	Route{
@@ -238,7 +238,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/variantes/show/{varianteid}",
 		nil,
-		false,
+		true,
 		product.GetProductVarianteByID,
 	},
 	Route{
@@ -247,7 +247,7 @@ var routes = Routes{
 		"PUT",
 		BaseAPI + "/variantes/update",
 		nil,
-		false,
+		true,
 		product.UpdateProductVariante,
 	},
 	Route{
@@ -256,7 +256,7 @@ var routes = Routes{
 		"DELETE",
 		BaseAPI + "/variantes/delete/{varianteid}",
 		nil,
-		false,
+		true,
 		product.DeleteProductVarianteByID,
 	},
 	Route{
@@ -265,7 +265,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/varianteValues",
 		nil,
-		false,
+		true,
 		product.GetProductVarianteValues,
 	},
 	Route{
@@ -274,7 +274,7 @@ var routes = Routes{
 		"POST",
 		BaseAPI + "/varianteValues/add",
 		nil,
-		false,
+		true,
 		product.AddProductVarianteValue,
 	},
 	Route{
@@ -283,7 +283,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/varianteValues/show/{varianteValueid}",
 		nil,
-		false,
+		true,
 		product.GetProductVarianteValueByID,
 	},
 	Route{
@@ -292,7 +292,7 @@ var routes = Routes{
 		"PUT",
 		BaseAPI + "/varianteValues/update",
 		nil,
-		false,
+		true,
 		product.UpdateProductVarianteValue,
 	},
 	Route{
@@ -301,7 +301,7 @@ var routes = Routes{
 		"DELETE",
 		BaseAPI + "/varianteValues/delete/{varianteValueid}",
 		nil,
-		false,
+		true,
 		product.DeleteProductVarianteValueByID,
 	},
 	Route{
@@ -310,7 +310,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/stocks",
 		nil,
-		false,
+		true,
 		product.GetProductStocks,
 	},
 	Route{
@@ -319,7 +319,7 @@ var routes = Routes{
 		"POST",
 		BaseAPI + "/stocks/add",
 		nil,
-		false,
+		true,
 		product.AddProductStock,
 	},
 	Route{
@@ -328,7 +328,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/stocks/show/{stockid}",
 		nil,
-		false,
+		true,
 		product.GetProductStockByID,
 	},
 	Route{
@@ -337,7 +337,7 @@ var routes = Routes{
 		"PUT",
 		BaseAPI + "/stocks/update",
 		nil,
-		false,
+		true,
 		product.UpdateProductStock,
 	},
 	Route{
@@ -346,7 +346,7 @@ var routes = Routes{
 		"DELETE",
 		BaseAPI + "/stocks/delete/{stockid}",
 		nil,
-		false,
+		true,
 		product.DeleteProductStockByID,
 	},
 	Route{
@@ -355,7 +355,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/prices",
 		nil,
-		false,
+		true,
 		product.GetProductPrices,
 	},
 	Route{
@@ -364,7 +364,7 @@ var routes = Routes{
 		"POST",
 		BaseAPI + "/prices/add",
 		nil,
-		false,
+		true,
 		product.AddProductPrice,
 	},
 	Route{
@@ -373,7 +373,7 @@ var routes = Routes{
 		"GET",
 		BaseAPI + "/prices/show/{priceid}",
 		nil,
-		false,
+		true,
 		product.GetProductPriceByID,
 	},
 	Route{
@@ -382,7 +382,7 @@ var routes = Routes{
 		"PUT",
 		BaseAPI + "/prices/update",
 		nil,
-		false,
+		true,
 		product.UpdateProductPrice,
 	},
 	Route{
@@ -391,7 +391,7 @@ var routes = Routes{
 		"DELETE",
 		BaseAPI + "/prices/delete/{priceid}",
 		nil,
-		false,
+		true,
 		product.DeleteProductPriceByID,
 	},
 }

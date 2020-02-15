@@ -21,9 +21,10 @@ func GetCategories(w http.ResponseWriter, r *http.Request) (int, string, error) 
 	if err != nil {
 		return http.StatusInternalServerError, "", err
 	}
-
+	if len(categories) == 0 {
+		return http.StatusNoContent, "", errors.New("No Categories found")
+	}
 	common.OkJSON(w, categories, false)
-
 	return http.StatusOK, "", nil
 }
 

@@ -7,24 +7,24 @@ import (
 //Category instance representation
 type Category struct {
 	gorm.Model
-	CategoryCode string     `gorm:"unique;not null" json:"categoryCode"`
-	CategoryName string     `gorm:"unique;not null" json:"categoryName"`
+	CategoryCode string     `gorm:"unique;not null" json:"code"`
+	CategoryName string     `gorm:"unique;not null" json:"name"`
 	IsActive     bool       `json:"isActive"`
 	Description  string     `json:"description"`
-	Parent       *Category  `gorm:"Foreignkey:ParentID" json:"parent"`
+	Parent       *Category  `gorm:"Foreignkey:ParentID" json:"-"`
 	ParentID     int        `json:"parentID"`
-	Products     []*Product `gorm:"many2many:products"`
-	HasStock     bool       `json:"hasStock"`
+	Products     []*Product `json:"-" gorm:"many2many:category_products"`
+	Level        int        `gorm:"Foreignkey:level" json:"level	"`
 }
 
 //Product represente product data
 type Product struct {
 	gorm.Model
-	ProductCode string      `gorm:"unique;not null" json:"productCode"`
-	ProductName string      `gorm:"unique;not null" json:"productName"`
+	ProductCode string      `gorm:"unique;not null" json:"code"`
+	ProductName string      `gorm:"unique;not null" json:"name"`
 	IsActive    bool        ` json:"isActive"`
 	Description string      ` json:"description"`
-	Categories  []*Category `gorm:"many2many:categories"`
+	Categories  []*Category `gorm:"many2many:category_products"`
 }
 
 //Variante represent variante data
