@@ -92,8 +92,8 @@ func GetUserByEmailAndPwd(w http.ResponseWriter, r *http.Request) (int, string, 
 	user := User{}
 	userGotten, err := user.FindUserByEmailAndPWD(ctx, loginInfo.Email, loginInfo.Password)
 	if err != nil {
-		common.KOJSON(w, http.StatusNoContent, "User not found")
-		return http.StatusNoContent, "", errors.New("User  not found")
+		common.KOJSON(w, http.StatusUnauthorized, "You are not authorised to access admin")
+		return http.StatusUnauthorized, "", errors.New("You are not authorised to access admin")
 	}
 	common.OkJSON(w, userGotten, false)
 	return http.StatusOK, "", nil
